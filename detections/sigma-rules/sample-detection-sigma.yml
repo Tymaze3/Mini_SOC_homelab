@@ -1,0 +1,26 @@
+title: Suspicious PowerShell Encoded Command Execution
+id: 001-powershell-encoded
+status: experimental
+description: Detects use of PowerShell with base64-encoded commands, commonly used by attackers to obfuscate behavior
+author: Tymaze3
+logsource:
+  product: windows
+  service: security
+  category: process_creation
+detection:
+  selection:
+    Image|endswith: '\\powershell.exe'
+    CommandLine|contains: '-enc'
+  condition: selection
+fields:
+  - CommandLine
+  - ParentImage
+  - Image
+  - UserId
+level: high
+tags:
+  - attack.execution
+  - attack.t1059.001
+falsepositives:
+  - Sysadmin scripts
+  - Backup automation tools
