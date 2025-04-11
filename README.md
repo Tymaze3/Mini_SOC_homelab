@@ -49,3 +49,24 @@ mini-soc-homelab/
 │   ├── scan-policies.md
 │   └── notes.md
 └── dashboard-screenshots/
+```
+
+---
+
+## 🚦 Status Tracker
+
+- [x] Create mini-SOC repo and README.md template
+- [ ] Set up log forwarding (rsyslog)
+- [ ] Install and configure Elastic Stack (ELK)
+- [ ] Configure Nessus for Kali scans
+- [ ] Parse logs and test first alert (e.g., unauthorized access)
+- [ ] Write first detection rule (Sigma format)
+- [ ] Document one response playbook
+
+---
+
+## 🔒 Disclaimer
+
+This mini-SOC is built in a fully isolated homelab for educational purposes only. It is not intended for use in production environments.
+
+---
